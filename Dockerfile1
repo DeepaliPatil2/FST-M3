@@ -1,0 +1,8 @@
+#Specify a base imge
+FROM alpine:3.18
+#setup working directory
+WORKDIR /user/app
+#instralled dependancies
+RUN apk add --update redis
+#set a default command
+CMD ["redis-server"]
